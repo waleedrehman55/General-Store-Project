@@ -89,59 +89,49 @@
           <div class="col-md-12">
 
             <div class="banner-blocks">
-            
+
               <div class="banner-ad large bg-info block-1">
+              <div class="swiper main-swiper">
+                <div class="swiper-wrapper">
+                  <?php
+                    // Fetch banners from DB
+                    $stmt = $conn->prepare("SELECT * FROM banners WHERE position = 1");
+                    $stmt->execute();
+                    $result = $stmt->get_result();
 
-                <div class="swiper main-swiper">
-                  <div class="swiper-wrapper">
-                    
+                  while($banner = $result->fetch_assoc()):
+                  ?>
                     <div class="swiper-slide">
                       <div class="row banner-content p-5">
                         <div class="content-wrapper col-md-7">
-                          <div class="categories my-3">100% natural</div>
-                          <h3 class="display-4">Fresh Smoothie & Summer Juice</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                          <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Shop Now</a>
-                        </div>
-                        <div class="img-wrapper col-md-5">
-                          <img src="images/product-thumb-1.png" class="img-fluid">
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                      <div class="row banner-content p-5">
-                        <div class="content-wrapper col-md-7">
-                          <div class="categories mb-3 pb-3">100% natural</div>
-                          <h3 class="banner-title">Fresh Smoothie & Summer Juice</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                          <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Shop Collection</a>
-                        </div>
-                        <div class="img-wrapper col-md-5">
-                          <img src="images/product-thumb-1.png" class="img-fluid">
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                      <div class="row banner-content p-5">
-                        <div class="content-wrapper col-md-7">
-                          <div class="categories mb-3 pb-3">100% natural</div>
-                          <h3 class="banner-title">Heinz Tomato Ketchup</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                          <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Shop Collection</a>
-                        </div>
-                        <div class="img-wrapper col-md-5">
-                          <img src="images/product-thumb-2.png" class="img-fluid">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="swiper-pagination"></div>
+                          <?php if (!empty($banner['sub_title'])): ?>
+                            <div class="categories my-3"><?= htmlspecialchars($banner['sub_title']) ?></div>
+                          <?php endif; ?>
 
+                          <h3 class="display-4"><?= htmlspecialchars($banner['title']) ?></h3>
+
+                          <?php if (!empty($banner['description'])): ?>
+                            <p><?= htmlspecialchars($banner['description']) ?></p>
+                          <?php endif; ?>
+
+                          <?php if (!empty($banner['button_link']) && !empty($banner['button_text'])): ?>
+                            <a href="<?= htmlspecialchars($banner['button_link']) ?>" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">
+                              <?= htmlspecialchars($banner['button_text']) ?>
+                            </a>
+                          <?php endif; ?>
+                        </div>
+
+                        <div class="img-wrapper col-md-5">
+                          <img src="images/product-thumb-1.png" class="img-fluid" alt="<?= htmlspecialchars($banner['title']) ?>">
+                        </div>
+                      </div>
+                    </div>
+                  <?php endwhile; ?>
                 </div>
+
+                <div class="swiper-pagination"></div>
               </div>
+            </div>
               
               <div class="banner-ad bg-success-subtle block-2" style="background:url('images/ad-image-1.png') no-repeat;background-position: right bottom">
                 <div class="row banner-content p-5">
@@ -1937,18 +1927,6 @@
         </div>
       </div>
     </footer>
-    <div id="footer-bottom">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 copyright">
-            <p>© 2023 Foodmart. All rights reserved.</p>
-          </div>
-          <div class="col-md-6 credit-link text-start text-md-end">
-            <p>Free HTML Template by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distributed by <a href="https://themewagon">ThemeWagon</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

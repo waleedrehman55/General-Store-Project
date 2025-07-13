@@ -99,10 +99,77 @@
 
             <ul class="d-flex justify-content-end list-unstyled m-0">
               <li>
-                <a href="#" class="rounded-circle bg-light p-2 mx-1">
+                <a data-bs-toggle="modal" data-bs-target="#loginModal" href="" class="rounded-circle bg-light p-2 mx-1">
                   <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#user"></use></svg>
                 </a>
               </li>
+              <!-- login Modal -->
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content py-3">
+                  <div class="modal-header p-3 mx-4 border-0">
+                      <img src="assets/images/RECIPELogo.png" alt="Food Fusion Logo">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body-login w-100">
+                    <div class="p-4 d-flex">
+                      <div class="leftlogin p-4">
+                        <h3 class="mb-2 fs-4">Login With</h3>
+                        <div class="connect-container">
+                          <p>Connect with</p>
+                          <button class="w-100 btn-facebook">
+                            <i class="fab fa-facebook-f me-2"></i> Sign in with Facebook
+                          </button>
+                        </div>                        
+                      </div>
+                      
+                      <div class="rightlogin p-4">
+                        <h3 class="mb-3 fs-4">Login Via Email</h3>
+                        <input loginput class="w-100 mb-2 loginput" type="text" placeholder="Email">
+                        <input class="w-100 mb-2 loginput" type="text" placeholder="Password">
+                        <button class="w-100">LOGIN</button>
+                      </div>
+                    </div>
+                    <p class="text-center">Dont have an account? <a data-bs-toggle="modal" data-bs-target="#SignModal" href="">Sign Up Now</a></p>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- Signin Modal -->
+          <div class="modal fade" id="SignModal" tabindex="-1" aria-labelledby="SignModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content py-3">
+                  <div class="modal-header p-3 mx-4 border-0">
+                      <img src="assets/images/RECIPELogo.png" alt="Food Fusion Logo">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body-login w-100">
+                    <div class="p-4 d-flex">
+                      <div class="leftlogin p-4">
+                        <h3 class="mb-2 fs-4">Signup With</h3>
+                        <div class="connect-container">
+                          <p>Connect with</p>
+                          <button class="w-100 btn-facebook">
+                            <i class="fab fa-facebook-f me-2"></i> Sign in with Facebook
+                          </button>
+                        </div>                        
+                      </div>
+                      
+                      <div class="rightlogin p-4">
+                        <h3 class="mb-3 fs-4">Login Via Email</h3>
+                        <input loginput class="w-100 mb-2 loginput" type="text" placeholder="First Name">
+                        <input class="w-100 mb-2 loginput" type="text" placeholder="Last Name">
+                        <input class="w-100 mb-2 loginput" type="text" placeholder="Username">
+                        <input class="w-100 mb-2 loginput" type="text" placeholder="Email">
+                        <input class="w-100 mb-2 loginput" type="text" placeholder="Password">
+                        <button class="w-100">LOGIN</button>
+                      </div>
+                    </div>
+                    <p class="text-center">Dont have an account? <a href="" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></p>
+                  </div>
+              </div>
+          </div>
+        </div>
               <li>
                 <a href="#" class="rounded-circle bg-light p-2 mx-1">
                   <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>

@@ -296,7 +296,7 @@ h1,h2,h3,h4,h5,h6 {
   top: 0;
   left: 0;
   z-index: 111;
-  background: #fff;
+  background: #c2c1c1;
 }
 
 .preloader-wrapper .preloader {
@@ -723,3 +723,200 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 /* Own Stylings */
+/* LOGIN */
+.modal-dialog {
+    max-width: 600px !important; 
+    width: 100% !important;
+}
+.modal-content {
+    border-radius: 0 !important;
+}
+
+.modal-body-login{
+    background-color: #ffffff;
+}
+.modal-fade{
+    width: 300pzx;
+}
+.modal-header img{
+    width: 160px;
+    mix-blend-mode: multiply;
+}
+.leftlogin{
+    width: 40%; 
+} 
+.rightlogin {
+    width: 60%; 
+}
+
+.leftlogin {
+    padding: 15px;
+}
+
+.rightlogin {
+    padding: 15px;
+}
+
+.modal-footer {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.btn-warning {
+    background-color: #f1581b !important;
+    border: none;
+    padding: 10px;
+    width: 100%;
+}
+.btn-facebook {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #0e35b6;
+    color: white;
+    padding: 6px 8px;
+    border-radius: 2px;
+}
+.loginput{
+    border-radius: 0;
+    border: 1px solid rgb(179, 179, 179);
+}
+.btn-facebook i {
+    font-size: 16px;
+}
+
+.btn-facebook:hover {
+    background-color: #1259a7;
+}
+.text-center {
+    position: relative;
+    margin-top: 15px;
+}
+.text-center span {
+    background: white;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+.line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #ddd;
+    left: 0;
+    top: 50%;
+    transform:  translateY(-50%);
+
+}
+.form-control {
+    height: 40px;
+}
+.modal-footer {
+    border-top: none;
+    text-align: center;
+}
+.btn-close{
+    font-size: 14px;
+}
+.connect-container {
+    line-height: -4px; 
+    margin-top: 10px;
+}
+
+.btn-facebook {
+    padding: 8px; 
+    margin-top: 5px; 
+}
+
+/* LOGIN */
+.community-section {
+    background: url('https://source.unsplash.com/1600x600/?cooking,kitchen') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+.community-overlay {
+    background: url(https://img.freepik.com/free-photo/chicken-skewers-with-slices-apples-chili_2829-19992.jpg?ga=GA1.1.598169318.1729265657&semt=ais_hybrid);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.community-content {
+    position: relative;
+    z-index: 2;
+}
+.community-btn {
+    background: #ff5733;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+.community-btn:hover {
+    background: #e04e2a;
+    color: #111111;
+}
+/* FOOTER */
+footer{
+    background-color: #272727;
+}
+.foot-main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding: 3vw;
+}
+.foot-main h2{
+    color: white;
+    font-size: 4.5vw;
+}
+.foot-main h2 span{
+    color: #e04e2a;
+}
+.foot-main ul li,.foot-main ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: #ddd;
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+.foot-main ul{
+    display: flex;
+    gap: 1vw;
+}
+.foot-left{
+    padding: 1vw;
+    width: 60%;
+}
+.foot-right{
+    padding: 1vw;
+    width: 40%;
+}
+.footpara-left{
+    color: #ddd;
+    font-size: 14px;
+    text-align: justify;
+}
+.footer-bottom{
+    padding: 3vw;
+    background-color: white;
+    text-align: center;
+}
+.footer-bottom p{
+   font-weight: 00;
+   font-size: 17px;
+}
+.span{
+   color: rgb(241, 82, 20);
+}
